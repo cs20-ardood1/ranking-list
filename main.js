@@ -67,7 +67,20 @@ function removePos() {
 }
 
 function move() {
-  console.log("Move");
+  let moveFrom = prompt("Move item from");
+  let moveTo = prompt("Move item to:");
+  if (
+    moveTo >= 1 &&
+    moveTo <= rankingList.length &&
+    moveFrom >= 1 &&
+    moveFrom <= rankingList.length
+  ) {
+    let moveItem = rankingList[moveFrom - 1];
+    rankingList.splice(moveFrom - 1, 1);
+    rankingList.splice(moveTo - 1, 0, moveItem);
+  } else {
+    alert("Invalid position.");
+  }
 }
 
 function edit() {
