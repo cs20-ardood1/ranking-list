@@ -48,7 +48,7 @@ function insert() {
   if (position >= 1 && position <= rankingList.length + 1) {
     let insert = prompt("Item to Insert:");
     if (insert) {
-      rankingList.splice(position - 1, 1, insert);
+      rankingList.splice(position - 1, 0, insert);
     }
   } else {
     alert("Invalid position.");
