@@ -55,7 +55,14 @@ function insert() {
   }
 }
 
-function removePos() {}
+function removePos() {
+  let position = prompt("Position to remove:");
+  if (position >= 1 && position <= rankingList.length) {
+    if (position) {
+      rankingList.splice(position - 1, 1);
+    }
+  }
+}
 
 function move() {
   console.log("Move");
