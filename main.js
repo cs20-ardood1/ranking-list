@@ -61,7 +61,9 @@ function removePos() {
     if (position) {
       rankingList.splice(position - 1, 1);
     }
-  }
+  } else {
+    alert("Invalid position.");
+}
 }
 
 function move() {
