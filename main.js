@@ -67,17 +67,17 @@ function removePos() {
 }
 
 function move() {
-  let moveFrom = prompt("Move item from");
-  let moveTo = prompt("Move item to:");
+  let moveFromIndex = prompt("Move item from");
+  let moveToIndex = prompt("Move item to:");
   if (
-    moveTo >= 1 &&
-    moveTo <= rankingList.length &&
-    moveFrom >= 1 &&
-    moveFrom <= rankingList.length
+    moveToIndex >= 1 &&
+    moveToIndex <= rankingList.length &&
+    moveFromIndex >= 1 &&
+    moveFromIndex <= rankingList.length
   ) {
-    let moveItem = rankingList[moveFrom - 1];
-    rankingList.splice(moveFrom - 1, 1);
-    rankingList.splice(moveTo - 1, 0, moveItem);
+    let itemMove = rankingList[moveFromIndex - 1];
+    rankingList.splice(moveFromIndex - 1, 1);
+    rankingList.splice(moveToIndex - 1, 0, moveItem);
   } else {
     alert("Invalid position.");
   }
