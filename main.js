@@ -77,7 +77,7 @@ function move() {
   ) {
     let itemMove = rankingList[moveFromIndex - 1];
     rankingList.splice(moveFromIndex - 1, 1);
-    rankingList.splice(moveToIndex - 1, 0, moveItem);
+    rankingList.splice(moveToIndex - 1, 0, itemMove);
   } else {
     alert("Invalid position.");
   }
